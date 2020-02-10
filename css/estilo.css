@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: red;
+}
+
+h2, h3{
+    color: white;
+
+}
+
+p{
+    color: white;
+    text-shadow: black;
+}
+
+.footer {
+    color: khaki;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.fomes{
+    color: white;
+}
+
+img{
+    border-radius: 100%;
+}
