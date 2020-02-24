@@ -39,7 +39,7 @@
     color: white;
     text-align: justify;
     border-style: double;
-    margin: 250px 200px 100px 200px; 
+    margin: 200px 200px 100px 200px; 
     opacity: 0.6;
     padding: 10px; 
     position: absolute;
@@ -106,7 +106,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 540;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -120,7 +120,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 450;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -134,7 +134,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 450;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -148,7 +148,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 450;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -162,7 +162,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 450;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -176,7 +176,7 @@
     height:54px;
     background: black;
     transition:all 1.5s ease;
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: 450;
     font-size: 17px;
     font-family: MyriadPro-Cond,Arial,sans-serif;
@@ -265,7 +265,7 @@
     color: white;
     text-align: justify;
     border-style: double;
-    margin: 250px 200px 100px 800px; 
+    margin: 250px 300px 100px 800px; 
     opacity: 0.6;
     padding: 10px; 
     position: absolute;
