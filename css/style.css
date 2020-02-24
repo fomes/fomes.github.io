@@ -8,10 +8,10 @@
     height: 10vh;
 }
 
-#music{
+/* #music{
     height: 90%;
     opacity: 0.8;
-}
+} */
 
 .header{
     grid-area: header;
