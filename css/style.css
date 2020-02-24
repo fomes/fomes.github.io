@@ -33,13 +33,13 @@
 
 #texto_historia {
     font-family: MyriadPro-Cond,Arial,sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     background-color: blue;
     font-weight: lighter;
     color: white;
     text-align: justify;
     border-style: double;
-    margin: 200px 200px 100px 200px; 
+    margin: 100px 200px 100px 200px; 
     opacity: 0.6;
     padding: 10px; 
     position: absolute;
