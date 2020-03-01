@@ -3,7 +3,7 @@
 Acesse:
 
 *Final Fantasy VII - Remake <br>
-<a href="fomes.github.io/ff7">fomes.github.io/ff7</a>
+fomes.github.io/ff7
 
 *Meme Generator <br>
-<a href="fomes.github.io/meme.generator">fomes.github.io/meme.generator</a>
+fomes.github.io/meme.generator
