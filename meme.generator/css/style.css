@@ -5,7 +5,7 @@ body{
 
 .main{
     background: darkblue;
-    height: 100vh;
+    height: auto;
     position: absolute;
     width: 100%;
 }
