@@ -17,7 +17,7 @@ function randColor() {
 
 function paint() {
   acertou = 0;
-  answer.innerHTML = 'Escolha uma cor';
+  answer.innerHTML = 'Advinhe a cor do valor RGB abaixo:';
 
   for (let i=0; i<ball.length; i++) {
     ball[i].style.backgroundColor = randColor();
