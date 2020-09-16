@@ -1,0 +1,23 @@
+body {
+  background-color: darkslategray
+}
+
+.container{
+  height: 300px;
+  width: 100%;
+}
+
+.display{
+  color: #4ec6ea;
+  width: 100%;
+  font-size: 120px;
+  text-align: center;
+  margin: 0px auto;
+  text-shadow: 1px 1px 1px #40a6c4;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.but{
+  text-align: center;
+}
