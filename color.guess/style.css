@@ -1,16 +1,14 @@
 body {
-  background-color: darkgray;
+  background-color: darkgrey
 }
 
-.title {
-  text-align: center;
+.navbar {
+  width: 100%;
+  height: 40px;
+  background-color: darkcyan;
 }
 
-.texto {
-  text-align: center;
-}
-
-.score {
+.title, .texto, .score {
   text-align: center;
 }
 

@@ -1,8 +1,9 @@
-const reset = document.getElementById('reset-game');
+const next = document.getElementById('reset-game');
 const answer = document.getElementById('answer');
 const score = document.getElementById('score');
 const rgb = document.getElementById('rgb-color');
 const ball = document.getElementsByClassName('ball');
+
 let acertou = 0;
 score.innerText = 0;
 
@@ -27,19 +28,21 @@ function paint() {
   rgb.innerHTML = document.getElementsByClassName('ball')[a].style.backgroundColor;
 
   for (let i = 0; i < ball.length; i++) {
-      ball[i].addEventListener('click', function result(){
-        if (ball[i].style.backgroundColor === rgb.innerHTML) {
-          answer.innerHTML = 'Acertou!';
-          if (acertou == 0) {
-            score.innerText = Number(score.innerText) +3;
-          } acertou = 1;
-        } else {
-          answer.innerHTML = 'Errou! Tente novamente!';
-          score.innerText = Number(score.innerText) -3;
-        }
-      });
+    ball[i].addEventListener('click', function result(){
+      if (ball[i].style.backgroundColor === rgb.innerHTML) {
+        answer.innerHTML = 'Acertou! Tente mais uma!';
+        if (acertou == 0) {
+          score.innerText = Number(score.innerText) +3;
+        } 
+        acertou = 1;
+
+      } else {
+          answer.innerHTML = 'Errou! Perdeu tudo!';
+          score.innerText = 0;
+      }
+    });
   }
 }
 
-reset.addEventListener('click', paint);
+next.addEventListener('click', paint);
 paint();
