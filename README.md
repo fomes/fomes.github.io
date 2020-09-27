@@ -1,12 +1,10 @@
-# fomes.github.io
+# My Projects
 
-Acesse:
+### Stopwatch
+https://fomes.github.io/stopwatch
 
-*Stopwatch <br>
-fomes.github.io/stopwatch
+### Meme Generator
+https://fomes.github.io/meme.generator
 
-*Meme Generator <br>
-fomes.github.io/meme.generator
-
-*Color Guess <br>
-fomes.github.io/color.guess
+### Color Guess
+https://fomes.github.io/color.gues
