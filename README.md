@@ -7,4 +7,4 @@ https://fomes.github.io/stopwatch
 https://fomes.github.io/meme.generator
 
 ### Color Guess
-https://fomes.github.io/color.gues
+https://fomes.github.io/color.guess
