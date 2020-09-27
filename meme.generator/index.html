@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Meme Generator</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Meme Generator</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <script defer src="js/script.js"></script>
+  <script defer src="js/html2canvas.min.js"></script>
 </head>
+
 <body>
-    <div class="main">
-        <div class="memes">
-            <img id="meme-1" class="meme" src="imgs/meme1.jpeg" onclick="mostraMeme1()">
-            <img id="meme-2" class="meme" src="imgs/meme2.jpeg" onclick="mostraMeme2()">
-            <img id="meme-3" class="meme" src="imgs/meme3.jpeg" onclick="mostraMeme3()">
-            <img id="meme-4" class="meme" src="imgs/meme4.jpeg" onclick="mostraMeme4()">
-        </div>
-
-        <div class="texto">
-            <p class="digite">Digite o texto:</p><input id="text-input" type="text" class="text-input" maxlength="60">
-        </div>
-
-        <div id="meme-image-container" class="meme-image-container">
-            <input type="file" id="meme-insert" onchange="mostraFoto(event)">
-
-            <button id="button1">Borda 1</button>
-            <button id="button2">Borda 2</button>
-            <button id="button3">Borda 3</button>
-
-            <img id="meme-image" class="meme-image">
-
-            <div id="meme-text" class="meme-text"></div>
-        </div>
+  <div id="main" class="main">
+    <div class="memes">
+      <img id="meme-1" class="card" src="imgs/meme1.jpeg" onclick="meme1()">
+      <img id="meme-2" class="card" src="imgs/meme2.jpeg" onclick="meme2()">
+      <img id="meme-3" class="card" src="imgs/meme3.jpeg" onclick="meme3()">
+      <img id="meme-4" class="card" src="imgs/meme4.jpeg" onclick="meme4()">
     </div>
 
-<script src="js/script.js"></script>
-</body>
+    <div class="texto">
+      <p class="digite">Legenda:<input id="text-input" type="text" class="text-input" maxlength="19"></p>
+      <input type="file" id="meme-insert" onchange="show(event)"><button onclick="ss()">Gerar Meme</button>
+    </div>
 
+    <div id="capture" class="img-container">
+      <div class="div-image">
+        <img id="meme-image" class="image">
+      </div>
+
+      <div class="div-subtitle">
+        <div id="meme-text" class="subtitle"></div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
