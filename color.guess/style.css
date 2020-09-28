@@ -1,15 +1,17 @@
 body {
-  background-color: darkgrey
+  background-color: #232323;
 }
 
 .navbar {
   width: 100%;
-  height: 40px;
-  background-color: darkcyan;
+  height: 50px;
+  background-color: steelblue;
+  color: white;
 }
 
 .title, .texto, .score {
   text-align: center;
+  color: white;
 }
 
 .cor {
@@ -24,6 +26,7 @@ body {
 .rgb-color {
   font-size: small;
   text-align: center;
+  color: white;
 }
 
 .start {
