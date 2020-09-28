@@ -1,10 +1,18 @@
 body {
   background-color: khaki;
+  background: url('../imgs/bgmeme.jpg');
+  background-size: cover;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .img-container {
-  display: flex;
-  flex-direction: column;
   border: 1px solid black;
   width: 430px;
   height: 390px;
@@ -25,6 +33,10 @@ body {
 .image {
   max-width: 430px;
   max-height: 350px;
+}
+
+.digite, .file {
+  color: white;
 }
 
 .memes{
