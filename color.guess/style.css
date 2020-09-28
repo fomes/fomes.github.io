@@ -50,3 +50,6 @@ body {
   margin: 10px;
   width: 60px;
 }
+
+.grow { transition: all .3s ease-in-out; }
+.grow:hover { transform: scale(1.3); }
