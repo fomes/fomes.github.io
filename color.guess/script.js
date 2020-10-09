@@ -3,6 +3,11 @@ const answer = document.getElementById('answer');
 const score = document.getElementById('score');
 const rgb = document.getElementById('rgb-color');
 const ball = document.getElementsByClassName('ball');
+const best = document.getElementById('best');
+
+if( best.innerText < localStorage.getItem('best')) {
+  best.innerText = localStorage.getItem('best');
+}
 
 let acertou = 0;
 score.innerText = 0;
@@ -28,21 +33,27 @@ function paint() {
   rgb.innerHTML = document.getElementsByClassName('ball')[a].style.backgroundColor;
 
   for (let i = 0; i < ball.length; i++) {
-    ball[i].addEventListener('click', function result(){
+    ball[i].addEventListener('click', () => {
+
       if (ball[i].style.backgroundColor === rgb.innerHTML) {
-        answer.innerHTML = 'Acertou! Tente mais uma!';
+        answer.innerHTML = 'Acertou! Tente mais uma...';
         if (acertou == 0) {
-          score.innerText = Number(score.innerText) +3;
+          score.innerText = parseInt(score.innerText) +1;
+
+          if (score.innerText >= localStorage.getItem('best')) {
+            localStorage.setItem('best', score.innerText);
+          }
         } 
         acertou = 1;
-
+        
       } else {
-          answer.innerHTML = 'Errou! Perdeu tudo!';
-          score.innerText = 0;
+        setTimeout(() => { document.location.reload(); }, 2000);
+        answer.innerHTML = 'Errou! Perdeu tudo...';
+        score.innerText = 0;
       }
     });
   }
 }
 
-next.addEventListener('click', paint);
+next.addEventListener('click', () => paint());
 paint();
