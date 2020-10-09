@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script defer src="script.js"></script>
+</head>
+<body style="background-color: darkgray;">
+
+  <div class="container text-center">
+    <h2>Letras de Músicas</h2>
+
+    <form class="form-horizontal" id="my-form">
+
+      <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-3">
+          <input type="text" id="artist" class="form-control" placeholder="Artist">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-3">
+          <input type="text" id="song" class="form-control" placeholder="Music">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-3">
+          <button type="submit" class="btn btn-primary">Buscar</button>
+          <button id="clear" class="btn btn-info">Limpar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="form-group text-center">
+    <div class="col-xs-6 col-xs-offset-3">
+      <pre id="letras" style="font-size: large;"></pre>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center fixed-bottom">© 2020 Copyright:
+    <a href="https://getbootstrap.com/" target="blank"> Bootstrap</a><span> / </span>
+    <a href="https://lyricsovh.docs.apiary.io/" target="blank"> API</a><span> / </span>
+    <a href="https://github.com/fomes" target="blank">Felipe Gomes</a>
+  </div>
+
+</body>
+</html>
