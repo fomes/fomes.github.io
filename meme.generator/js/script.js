@@ -4,6 +4,7 @@ let show = function(event) {
 };
 
 let main = document.getElementById('main');
+let button = document.createElement('button');
 
 function ss() {
   html2canvas(document.querySelector("#capture")).then(canvas => {
@@ -14,8 +15,6 @@ function ss() {
 
 let texto = document.getElementById("text-input");
 texto.addEventListener('input', subtitle);
-
-borda = document.getElementById("meme-image-container");
 
 function subtitle(){
   document.getElementById("meme-text").innerHTML = texto.value;

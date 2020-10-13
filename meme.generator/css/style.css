@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 
+body .bg {
+  opacity: 0.4;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -58,4 +62,8 @@ body {
   margin-left: 13px;
   text-shadow: 2px 2px 2px black;
   word-wrap: break-word;
+}
+
+.footer {
+  font-weight: bolder;
 }
