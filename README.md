@@ -7,3 +7,5 @@
 #### [Color Guess](https://fomes.github.io/color.guess)
 
 #### [Lyrics](https://fomes.github.io/lyrics)
+
+#### [Pokedex](https://fomes.github.io/pokedex)
