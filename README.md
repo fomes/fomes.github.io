@@ -8,4 +8,4 @@
 
 #### [Lyrics](https://fomes.github.io/lyrics)
 
-#### [Pokedex](https://fomes.github.io/pokedex)
+#### [Pokedex](https://fomes.github.io/pokedex/)

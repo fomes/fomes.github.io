@@ -1,6 +1,6 @@
 # Pokedex List Project
 
-#### [DEMO](https://fomes.github.io/pokedex)
+#### [DEMO](https://fomes.github.io/pokedex/)
 
 A simple pokedex with Javascript powered by PokeAPI
 
