@@ -5,7 +5,7 @@ const rgb = document.getElementById('rgb-color');
 const ball = document.getElementsByClassName('ball');
 const best = document.getElementById('best');
 
-if( localStorage.getItem('best')) {
+if( best.innerText < localStorage.getItem('best')) {
   best.innerText = localStorage.getItem('best');
 }
 
@@ -40,7 +40,7 @@ function paint() {
         if (acertou == 0) {
           score.innerText = parseInt(score.innerText) +10;
 
-          if (score.innerText > parseInt(localStorage.getItem('best'))) {
+          if (score.innerText > parseInt(localStorage.getItem('best')) || !localStorage.getItem('best')) {
             localStorage.setItem('best', score.innerText);
           }
         } 
