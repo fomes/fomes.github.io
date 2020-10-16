@@ -5,7 +5,7 @@ const rgb = document.getElementById('rgb-color');
 const ball = document.getElementsByClassName('ball');
 const best = document.getElementById('best');
 
-if( best.innerText < localStorage.getItem('best')) {
+if( localStorage.getItem('best')) {
   best.innerText = localStorage.getItem('best');
 }
 

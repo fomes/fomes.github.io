@@ -1,6 +1,10 @@
 body {
   background: linear-gradient(90deg, rgba(208,100,100,1) 35%, rgba(0,212,255,1) 100%);
   text-align: center;
+
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
 }
 
 .header {
@@ -41,4 +45,12 @@ body {
 
 .card .type {
   font-size: small;
+}
+
+.footer {
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
 }

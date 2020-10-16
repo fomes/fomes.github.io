@@ -1,0 +1,16 @@
+/* Footer always on bottom, not fixed */
+body {
+  background: url('../img/bg-image.jpeg');
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
+}
+
+.footer {
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+/* Footer always on bottom, not fixed */

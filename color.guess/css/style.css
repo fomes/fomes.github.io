@@ -1,7 +1,9 @@
 body {
   background-color: #232323;
   color: white;
-  text-align: center;
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -11,6 +13,7 @@ body {
 }
 
 .title, .texto, .score {
+  margin: 0;
   text-align: center;
 }
 
@@ -43,6 +46,14 @@ body {
   height: 60px;
   margin: 10px;
   width: 60px;
+}
+
+.footer {
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
 }
 
 .grow { transition: all .3s ease-in-out; }

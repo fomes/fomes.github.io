@@ -1,8 +1,10 @@
 body {
-  background-color: khaki;
   background: url('../imgs/bgmeme.jpg');
   background-size: cover;
   text-align: center;
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
 }
 
 body .bg {
@@ -66,4 +68,8 @@ body .bg {
 
 .footer {
   font-weight: bolder;
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
 }
