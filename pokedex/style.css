@@ -24,6 +24,10 @@ body {
 	padding: 20px;
   text-align: center;
   transition: 0.5s;
+
+  max-height: 380px;
+  max-width: 178px;
+  
 }
 
 .card:hover {
