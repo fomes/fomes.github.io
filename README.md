@@ -1,7 +1,5 @@
 # My Projects
 
-### [Github](https://github.com/fomes/fomes.github.io)
-
 #### [Stopwatch](https://fomes.github.io/stopwatch)
 
 #### [Meme generator](https://fomes.github.io/meme.generator)
@@ -11,3 +9,5 @@
 #### [Lyrics](https://fomes.github.io/lyrics)
 
 #### [Pokedex](https://fomes.github.io/pokedex/)
+
+##### [© Felipe Gomes](https://github.com/fomes/fomes.github.io)
