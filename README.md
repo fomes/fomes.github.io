@@ -1,5 +1,4 @@
-# My Projects 
-### https://github.com/fomes/fomes.github.io
+# My Projects | ### [Github](https://github.com/fomes/fomes.github.io
 
 #### [Stopwatch](https://fomes.github.io/stopwatch)
 
