@@ -6,12 +6,15 @@
   <title>Meme Generator</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <script defer src="js/script.js"></script>
   <script defer src="js/html2canvas.min.js"></script>
 </head>
 
 <body>
   <div id="main" class="main">
+
     <div class="memes">
       <img id="meme-1" class="card" src="imgs/meme1.jpeg" onclick="meme1()">
       <img id="meme-2" class="card" src="imgs/meme2.jpeg" onclick="meme2()">
@@ -20,8 +23,9 @@
     </div>
 
     <div class="texto">
-      <p class="digite">Legenda:<input id="text-input" type="text" class="text-input" maxlength="26"></p>
-      <input type="file" id="meme-insert" onchange="show(event)" class="file"><button onclick="ss()">Gerar Meme</button>
+      <input type="file" id="meme-insert" onchange="show(event)" class="file"><br>
+      <input id="text-input" type="text" class="text-input" maxlength="26" placeholder="Legenda">
+      <button onclick="ss()">Gerar Meme</button>
     </div>
 
     <div id="capture" class="img-container">
@@ -34,7 +38,8 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer">Copyright &copy; 2020
+      <a href="https://getbootstrap.com/" target="blank"> Bootstrap</a><span> / </span>
       <a href="https://github.com/fomes/fomes.github.io/tree/master/meme.generator" target="blank">Github</a><span> / </span>
       <a href="https://github.com/fomes" target="blank">Felipe Gomes</a>
     </div>
