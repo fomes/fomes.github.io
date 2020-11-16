@@ -1,6 +1,7 @@
 /* Footer always on bottom, not fixed */
 body {
   background: url('../img/bg-image.jpeg');
+  background-color: rgb(227, 226, 222);
   position: relative;
   padding-bottom: 58px;
   min-height: 100vh;

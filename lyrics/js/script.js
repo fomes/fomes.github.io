@@ -27,11 +27,16 @@ async function show() {
     const songs = JSON.parse(localStorage.getItem('lyrics')) || [];
 
     if(data.lyrics) {
-      const newSong = {'artist' : artist.value, 'song': song.value, 'lyric': data.lyrics};
-      songs.push(newSong);
+      if(songs.find(e => e.artist === artist.value) && songs.find(e => e.song === song.value)) {
+        letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
 
-      letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
-      localStorage.setItem('lyrics', JSON.stringify(songs));
+      } else {
+        const newSong = {'artist' : artist.value, 'song': song.value, 'lyric': data.lyrics};
+        songs.push(newSong);
+
+        letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
+        localStorage.setItem('lyrics', JSON.stringify(songs))
+      }
 
     } else {
       letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
