@@ -3,12 +3,14 @@ function get(artist, title) {
 }
 
 const form = document.querySelector('#my-form');
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   show();
 });
 
 const clear = document.getElementById('clear');
+
 clear.addEventListener('click', () => {
   document.location.reload();
 });
@@ -18,7 +20,7 @@ async function show() {
   const song = document.querySelector('#song');
   const letras = document.querySelector('#letras');
 
-  letras.innerHTML ='<div class="spinner-grow" role="status"><span class="sr-only">Carregando... </span></div>';
+  letras.innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
 
   try {
     const resp = await get(artist.value, song.value);
