@@ -79,7 +79,6 @@ function saidaItem(nome) {
 
   for (var i = 0; i < itens.length; i++) {
     if (itens[i].nome === nome) {
-      // itens.splice(i, 1); // remove o item especifico
       let qtd = prompt('Quantidade para dar saída?');
 
       if (qtd === null || qtd === '') {
