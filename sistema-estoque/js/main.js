@@ -157,9 +157,9 @@ function mostrarResultado() {
         <td style="word-wrap: break-word;">' + quant + '</td>\
         <td style="word-wrap: break-word;">' + compra + '</td>\
         <td style="word-wrap: break-word;">' + venda + '</td>\
-        <td><button class="btn btn-primary font-weight-bold" onclick="entradaItem(\'' + nome + '\')">+</button></td>\
-        <td><button class="btn btn-warning font-weight-bold" onclick="saidaItem(\'' + nome + '\')">-</button></td>\
-        <td><button class="btn btn-danger font-weight-bold" onclick="removerItem(\'' + nome + '\')">x</button></td>\
+        <td><button class="btn btn-primary font-weight-bold btn-sm" onclick="entradaItem(\'' + nome + '\')">+</button></td>\
+        <td><button class="btn btn-warning font-weight-bold btn-sm" onclick="saidaItem(\'' + nome + '\')">-</button></td>\
+        <td><button class="btn btn-danger font-weight-bold btn-sm" onclick="removerItem(\'' + nome + '\')">x</button></td>\
       </tr>';
 
     produto.value = '';

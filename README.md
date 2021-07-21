@@ -8,4 +8,6 @@
 
 #### [Pokedex](https://fomes.github.io/pokedex/)
 
+#### [Estoque](https://fomes.github.io/sistema-estoque/)
+
 ##### [© Felipe Gomes](https://github.com/fomes/fomes.github.io)

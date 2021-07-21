@@ -18,10 +18,10 @@
 }
 
 
-h1 {
+h2 {
   color: rgb(30, 19, 179);
   font-weight: bolder;
-  font-size: 18pt;
+  font-size: 14pt;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: block;
   padding-top: 40px;
@@ -52,10 +52,6 @@ p {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
 }
 
-#comport-table {
-  margin: 6px 15px 6px 15px;
-}
-
 .f-grid {
   background-color: #EBEBEB;
   font-size: 13px;
@@ -64,11 +60,9 @@ p {
 .f-grid th {
   border-bottom: solid 2px rgba(0, 0, 0, 0.219);
   width: 100%;
-  padding: 0px 10px 0px 10px;
 }
 
 .f-grid td {
-  padding: 6px 0px 6px 0px;
   border-bottom: solid 0.5px #0000001f;
   font-weight: bold;
 }
