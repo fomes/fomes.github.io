@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Controle de Estoque</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <script defer src="js/main.js"></script>
+</head>
+
+<body onload="mostrarResultado()" class="f-body">
+  <main id="app" class="text-center">
+    <header>
+      <h1>SISTEMA DE CONTROLE DE ESTOQUE</h1>
+    </header>
+
+    <section id="dados" class="f-container container">
+      <p>
+        ADICIONAR PRODUTO
+        <i class="fa fa-shopping-cart"></i>
+      </p>
+
+      <input class="f-input" type="text" name="produto" id="produto" placeholder="Nome do Item"
+        autocomplete="off" /></br>
+
+      <input class="f-input" type="number" name="quantidade" id="quantidade" placeholder="Quantidade"
+        autocomplete="off" input class="f-input" mode="numeric" /></br>
+
+      <input class="f-input" type="number" name="preço" id="preço-compra" placeholder="Preço de Compra R$" autocomplete="off"
+        inputmode="numeric" /></br>
+
+      <input class="f-input" type="number" name="preço" id="preço-venda" placeholder="Preço de Venda R$" autocomplete="off"
+        inputmode="numeric" /></br>
+
+      <button class="btn btn-primary" name="adicionar" id="adicionar"onclick="verificar(), adicionar(), mostrarResultado()">
+        ADICIONAR
+      </button>
+
+      <button class="btn btn-danger" name="excluir" id="excluir" onclick="excluir(), mostrarResultado()">
+        EXCLUIR TUDO
+      </button>
+
+      <button class="btn btn-warning" name="excluir" id="excluir" onclick="localStorageBackup()">
+        BACKUP
+      </button>
+
+      <button class="btn btn-success" name="excluir" id="excluir" onclick="localStorageRestore()">
+        RESTORE
+      </button>
+
+    </section>
+    <section id="estoque">
+      <div id="comport-table">
+        <table class="f-grid container" style="table-layout: fixed; width: 100%;">
+          <th>ITEM</th>
+          <th>QUANTIDADE</th>
+          <th>PREÇO DE COMPRA(R$)</th>
+          <th>PREÇO DE VENDA(R$)</th>
+          <th>ENTRADA</th>
+          <th>SAÍDA</th>
+          <th>EXCLUIR</th>
+          <tbody id="resultados"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="f-footer">
+    Copyright &copy; 2021 | <a href="https://github.com/fomes" target="_blank">Felipe Gomes</a>
+  </footer>
+</body>
+
+</html>
