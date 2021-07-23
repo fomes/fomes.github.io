@@ -17,6 +17,38 @@
   font-family: Open Sans, sans-serif;
 }
 
+.f-btn {
+  background: none;
+  border: none;
+}
+
+.fa-minus {
+  color: #df1212;
+}
+
+.fa-minus:hover {
+  color: #000000;
+}
+
+.fa-minus:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.fa-plus {
+  color: #00a708;
+}
+
+.fa-plus:hover {
+  color: #000000;
+}
+
+.fa-plus:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 h2 {
   color: rgb(30, 19, 179);
@@ -71,7 +103,6 @@ p {
   bottom: 0;
   text-align: center;
   padding: 20px;
-  position: absolute;
   width: 100%;
   font-size: smaller;
 }

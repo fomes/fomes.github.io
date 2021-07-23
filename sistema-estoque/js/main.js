@@ -2,21 +2,65 @@ var produto = document.getElementById("produto");
 var quantidade = document.getElementById("quantidade");
 var preçov = document.getElementById("preço-venda");
 var preçoc = document.getElementById("preço-compra");
+var saldo = document.getElementById("saldo");
+
+let numb = 0;
+let valor_retirada = 0;
+
+if(!localStorage.getItem('saldo')) {
+  saldo.innerText = numb.toFixed(2);
+  
+} else {
+  saldo.innerText = parseFloat(localStorage.getItem('saldo')).toFixed(2);
+}
 
 function verificar() {
   if (produto.value == "" && quantidade.value == 0 && preçov.value <= 0) {
     window.alert('Preencha todos os campos!');
-
+    
   } else if (produto.value == "") {
     window.alert('Preencha o "Nome do Item"!');
-
+    
   } else if (quantidade.value == 0) {
     window.alert('Preencha a "Quantidade"!');
+    
+  } else if (preçoc.value <= 0) {
+    window.alert('Preencha o campo "Preço de Compra"!');
 
   } else if (preçov.value <= 0) {
-    window.alert('Preencha o campo "Preço"!');
+    window.alert('Preencha o campo "Preço de Venda"!');
   };
 };
+
+function retirada() {
+  let total = 0;
+  valor_retirada = prompt('Digite valor para retirar: ');
+
+  if(valor_retirada === null || valor_retirada === '') {
+    return;
+
+  } else {
+    total = parseFloat(saldo.innerText) - parseFloat(valor_retirada);
+    localStorage.setItem('saldo', total);
+    location.reload();
+  }
+
+}
+
+function deposito() {
+  let total = 0;
+  valor_deposito = prompt('Digite valor para retirar: ');
+
+  if(valor_deposito === null || valor_deposito === '') {
+    return;
+
+  } else {
+    total = parseFloat(saldo.innerText) + parseFloat(valor_deposito);
+    localStorage.setItem('saldo', total);
+    location.reload();
+  }
+
+}
 
 function excluir() {
   if (confirm('Tem certeza que deseja excluir todos os produtos?')) {
@@ -76,10 +120,12 @@ function adicionar() {
 
 function saidaItem(nome) {
   var itens = JSON.parse(localStorage.getItem('estoqueItens'));
+  let valor_venda = parseFloat(saldo.innerText);
 
   for (var i = 0; i < itens.length; i++) {
+    let qtd = 0;
     if (itens[i].nome === nome) {
-      let qtd = prompt('Quantidade para dar saída?');
+      qtd = prompt('Quantidade para dar saída?');
 
       if (qtd === null || qtd === '') {
         return;
@@ -89,12 +135,20 @@ function saidaItem(nome) {
       }
     };
 
+    // console.log("saldo pré-venda: ", valor_venda);
+    // console.log("qtd: ", qtd);
+    // ------------------------------------------------------------
+    valor_venda += itens[i].venda*qtd;
+    localStorage.setItem('saldo', parseFloat(valor_venda));
+    // ------------------------------------------------------------
+    // console.log("saldo pós-venda: ", valor_venda);
+
     localStorage.setItem('estoqueItens', JSON.stringify(itens));
 
   };
 
   mostrarResultado();
-
+  location.reload();
 };
 
 function entradaItem(nome) {
@@ -172,6 +226,8 @@ function mostrarResultado() {
 
 };
 
+// https://github.com/todvora/localstorage-backup
+
 var localStorageBackup = function () {
   if (confirm('Deseja fazer backup dos produtos?')) {
     var backup = {};
@@ -195,7 +251,7 @@ var localStorageBackup = function () {
 var localStorageRestore = function () {
   var t = document.createElement('div');
   var a = document.createElement('a');
-  a.appendChild(document.createTextNode('X'));
+  a.appendChild(document.createTextNode('[ x ]'));
   a.setAttribute('href', '#');
 
   a.style.position = 'absolute';
@@ -232,7 +288,8 @@ var localStorageRestore = function () {
           var value = decodeURIComponent(unescape(backup[key]));
           window.localStorage.setItem(key, value);
         }
-        alert(Object.keys(backup).length + ' items resturados!');
+        // alert(Object.keys(backup).length + ' items resturados!');
+        alert('Backup restaurado com sucesso!');
         location.reload();
       };
       reader.readAsText(f);
