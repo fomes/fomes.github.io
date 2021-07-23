@@ -49,7 +49,7 @@ function retirada() {
 
 function deposito() {
   let total = 0;
-  valor_deposito = prompt('Digite valor para retirar: ');
+  valor_deposito = prompt('Digite valor para depositar: ');
 
   if(valor_deposito === null || valor_deposito === '') {
     return;
