@@ -135,14 +135,8 @@ function saidaItem(nome) {
       }
     };
 
-    // console.log("saldo pré-venda: ", valor_venda);
-    // console.log("qtd: ", qtd);
-    // ------------------------------------------------------------
     valor_venda += itens[i].venda*qtd;
     localStorage.setItem('saldo', parseFloat(valor_venda));
-    // ------------------------------------------------------------
-    // console.log("saldo pós-venda: ", valor_venda);
-
     localStorage.setItem('estoqueItens', JSON.stringify(itens));
 
   };
