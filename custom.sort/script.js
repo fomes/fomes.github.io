@@ -18,16 +18,16 @@ const newPlayer = $('#newPlayer');
 let shuffledArray = [];
 
 const arrayPlayers = [
-  'VMaax',
-  'RazeNation',
-  'Fomes',
-  'Wickd',
-  'HeySarah',
-  'PaiDe3',
-  'Suvino',
   'z0xy',
+  'Luzek',
+  'Wickd',
+  'Fomes',
+  'Suvino',
+  'VMaax',
+  'PaiDe3',
   'FizzGuei',
-  'Luzek'
+  'HeySarah',
+  'RazeNation',
 ];
 
 function showPlayers() {
@@ -39,23 +39,36 @@ showPlayers();
 function teamSort() {
   shuffledArray = arrayPlayers.sort(() => 0.5 - Math.random());
 
-  t1_player1.innerText = shuffledArray[0];
-  t1_player2.innerText = shuffledArray[1];
-  t1_player3.innerText = shuffledArray[2];
-  t1_player4.innerText = shuffledArray[3];
-  t1_player5.innerText = shuffledArray[4];
-  
-  t2_player1.innerText = shuffledArray[5];
-  t2_player2.innerText = shuffledArray[6];
-  t2_player3.innerText = shuffledArray[7];
-  t2_player4.innerText = shuffledArray[8];
-  t2_player5.innerText = shuffledArray[9];
+  if (shuffledArray.length < 10) {
+    alert('Coloque 10 jogadores para sortear!');
+  }
+
+  else {
+    t1_player1.innerText = shuffledArray[0];
+    t1_player2.innerText = shuffledArray[1];
+    t1_player3.innerText = shuffledArray[2];
+    t1_player4.innerText = shuffledArray[3];
+    t1_player5.innerText = shuffledArray[4];
+    
+    t2_player1.innerText = shuffledArray[5];
+    t2_player2.innerText = shuffledArray[6];
+    t2_player3.innerText = shuffledArray[7];
+    t2_player4.innerText = shuffledArray[8];
+    t2_player5.innerText = shuffledArray[9];
+  }
+
 }
 
 function addPlayer() {
   if (arrayPlayers.length < 10) {
-    arrayPlayers.push(newPlayer.value);
-    showPlayers();
+    if (newPlayer.value.length === 0) {
+      alert('Digite um nome!');
+    } else {
+      arrayPlayers.push(newPlayer.value);
+      showPlayers();
+    }
+  } else {
+    alert('Máx: 10 jogadores!');
   }
 }
 

@@ -6,33 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Sort</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="header">
-    <h3>CUSTOM GAME</h3>
-    <input type="text" placeholder="novo jogador" id="newPlayer" class="input-field"/>
-    <button class="btn-small" onclick="addPlayer()">ADD</button>
+  <h3 class="center">Custom Game</h3>
+  
+  <div class="row center">
+
+    <div class="input-field inline">
+      <input id="newPlayer" type="text" class="validate" placeholder="novo jogador">
+    </div>
+
+    <div class="input-field inline">
+      <button class="btn" onclick="addPlayer()">ADD</button>
+    </div>
+
   </div>
   
-  <div class="container">
-    
-    <div>
-      <div class="btn-sort">
-        <button class="btn-small" onclick="teamSort()">SORTEAR</button>
-      </div>
+  <div class="container row">
+
+    <div class="col s2">
+      <button class="btn" onclick="teamSort()">SORTEAR</button>
       <ol class="players"></ol>
     </div>
 
-    <div class="team1">
-      <table class="striped">
+    <div class="team1 col s2">
+      <table class="striped bordered centered">
         <tr>
-          <th>TEAM 1</th>
+          <th class="center-align">TEAM 1</th>
         </tr>
         <tr>
           <td class="t1j1"></td>
@@ -52,18 +58,18 @@
       </table>
     </div>
 
-    <div class="changeButtons">
-      <p class="change" onclick="change(0)"><i class="fa fa-exchange-alt"></i></p>
-      <p class="change" onclick="change(1)"><i class="fa fa-exchange-alt"></i></p>
-      <p class="change" onclick="change(2)"><i class="fa fa-exchange-alt"></i></p>
-      <p class="change" onclick="change(3)"><i class="fa fa-exchange-alt"></i></p>
-      <p class="change" onclick="change(4)"><i class="fa fa-exchange-alt"></i></p>
+    <div class="changeButtons col s3 center pull-s2">
+      <p><i class="fa fa-exchange-alt" onclick="change(0)"></i></p>
+      <p><i class="fa fa-exchange-alt" onclick="change(1)"></i></p>
+      <p><i class="fa fa-exchange-alt" onclick="change(2)"></i></p>
+      <p><i class="fa fa-exchange-alt" onclick="change(3)"></i></p>
+      <p><i class="fa fa-exchange-alt" onclick="change(4)"></i></p>
     </div>
 
-    <div class="team2">
-      <table class="striped responsive-table">
+    <div class="team2 col s2 pull-s4">
+      <table class="striped bordered centered">
         <tr>
-          <th>TEAM 2</th>
+          <th class="center-align">TEAM 2</th>
         </tr>
         <tr>
           <td class="t2j1"></td>
@@ -82,7 +88,6 @@
         </tr>
       </table>
     </div>
-
   </div>
 
   <div class="footer">Copyright &copy; 2021
