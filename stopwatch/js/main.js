@@ -1,36 +1,58 @@
-let ms = 0, s = 0, m = 0;
-let timer;
+// https://dev.to/walternascimentobarroso/creating-a-timer-with-javascript-8b7
+// https://dev.to/mrahmadawais/use-instead-of-document-queryselector-all-in-javascript-without-jquery-3ef1
 
-let display = document.querySelector('.display');
+const $ = document.querySelector.bind(document);
+
+let hour = 0;
+let minute = 0;
+let second = 0;
+let millisecond = 0;
+
+let cron;
 
 function start() {
-  if(!timer) {
-    timer = setInterval(run, 10);
-  }
+  pause();
+  cron = setInterval(() => { timer(); }, 10);
 }
 
 function pause() {
-  clearInterval(timer);
-  timer = false;
+  clearInterval(cron);
 }
 
 function reset() {
-  clearInterval(timer);
-  timer = false;
-  m = 0; s = 0; ms = 0;
-  display.textContent = (m<10? '0'+m : m)+':'+(s<10? '0'+s : s)+':'+(ms<10? '0'+ms : ms);
- }
+  hour = 0;
+  minute = 0;
+  second = 0;
+  millisecond = 0;
 
-function run() {
-  display.textContent = (m<10? '0'+m : m)+':'+(s<10? '0'+s : s)+':'+(ms<10? '0'+ms : ms);
-  ms++;
-  
-  if(ms == 100) {
-    ms = 0;
-    s++;
+  $('#hour').innerText = '00';
+  $('#minute').innerText = '00';
+  $('#second').innerText = '00';
+  $('#millisecond').innerText = '000';
+}
+
+function timer() {
+  if ((millisecond += 10) == 1000) {
+    millisecond = 0;
+    second++;
   }
-  if(s == 60) {
-    s = 0;
-    m++;
+
+  if (second == 60) {
+    second = 0;
+    minute++;
   }
+
+  if (minute == 60) {
+    minute = 0;
+    hour++;
+  }
+
+  $('#hour').innerText = showTime(hour);
+  $('#minute').innerText = showTime(minute);
+  $('#second').innerText = showTime(second);
+  $('#millisecond').innerText = showTime(millisecond);
+}
+
+function showTime(input) {
+  return input > 10 ? input : `0${input}`
 }

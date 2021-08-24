@@ -6,22 +6,20 @@
   <title>Stopwatch</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <script defer src="js/main.js"></script>
 </head>
 <body>
 
-  <div class="main">
-    <div class="stopwatch">
-      <div class="display">
-        00:00:00
-      </div>
-      <div class="but">
-        <button class="btn btn-primary btn-lg" onclick="start()">start</button>
-        <button class="btn btn-info btn-lg" onclick="pause()">pause</button>
-        <button class="btn btn-danger btn-lg" onclick="reset()">reset</button>
-      </div>
+  <div style="text-align: center;">
+    <div class="display">
+      <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
     </div>
+
+    <br />
+
+    <button class="btn btn-primary btn-lg" name="start" onclick="start()">start</button>
+    <button class="btn btn-info btn-lg" name="pause" onclick="pause()">pause</button>
+    <button class="btn btn-danger btn-lg" name="reset" onclick="reset()">reset</button>
   </div>
   
   <div class="footer">Copyright &copy; 2020
