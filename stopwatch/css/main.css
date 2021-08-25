@@ -1,20 +1,23 @@
 body {
   background-color: bisque;
-
-  position: relative;
-  padding-bottom: 58px;
-  min-height: 100vh;
 }
 
+/* align vertical */
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* div center */
 .display{
   color: #4ec6ea;
-  width: 100%;
   font-size: 100px;
-  text-align: center;
-  margin: 0px auto;
   text-shadow: 1px 1px 1px #40a6c4;
   font-family: Helvetica;
   font-weight: bold;
+  text-align: center;
 }
 
 .footer {
@@ -24,4 +27,15 @@ body {
   position: fixed;
   text-align: center;
   width: 100%;  
+}
+
+@media screen and (max-width: 720px) {
+  .display {
+    font-size: 50px;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+
 }
