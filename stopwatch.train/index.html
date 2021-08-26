@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <div style="text-align: center;">
+    <div class="display">
+      <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+      <div><span id="p-second">30</span>:<span id="p-millisecond">000</span></div>
+    </div>
+
+    <br />
+
+    <button class="btn btn-primary btn-lg" name="start" onclick="start()">start</button>
+    <button class="btn btn-info btn-lg" name="pause" onclick="pause()">pause</button>
+    <button class="btn btn-danger btn-lg" name="reset" onclick="reset()">reset</button>
+
+    <!-- <button class="btn btn-dark btn-lg" name="start" onclick="startRestTimer()">start</button>
+    <button class="btn btn-dark btn-lg" name="reset" onclick="resetRest()">reset</button> -->
+  </div>
+
+  <audio src="" autoplay type="audio/mpeg" id="song"></audio>
+  
+  <div class="footer">Copyright &copy; 2020
+    <a href="https://getbootstrap.com/" target="blank"> Bootstrap</a><span> / </span>
+    <a href="https://github.com/fomes/fomes.github.io/tree/master/stopwatch" target="blank">Github</a><span> / </span>
+    <a href="https://github.com/fomes" target="blank">Felipe Gomes</a>
+  </div>
+</body>
+</html>
