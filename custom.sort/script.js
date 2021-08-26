@@ -1,4 +1,4 @@
-const $ = q => document.querySelector(q);
+const $ = document.querySelector.bind(document);
 
 const t1_player1 = $('.t1j1');
 const t1_player2 = $('.t1j2');
@@ -109,4 +109,16 @@ function change(index) {
     t1_player5.innerText = t2_player5.innerText;
     t2_player5.innerText = tempPlayer;
   }
+}
+
+//@media query
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+  $(".players-div").classList.add("pull-s1");
+  $(".team1").classList.add("push-s1");
+
+  $(".changeButtons").classList.remove("pull-s2");
+
+  $(".team2").classList.remove("pull-s4");
+  $(".team2").classList.add("pull-s1");
 }
