@@ -1,0 +1,35 @@
+body {
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: rotate(360deg);
+}
+
+.title {
+  text-align: center;
+}
+
+.about {
+  text-align: justify;
+}
+
+.projects {
+  margin-top: 10px;
+  text-align: center;
+}
