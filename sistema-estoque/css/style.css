@@ -17,6 +17,10 @@
   font-family: Open Sans, sans-serif;
 }
 
+.f-font {
+  display: none;
+}
+
 .f-btn {
   background: none;
   border: none;
