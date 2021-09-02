@@ -1,54 +1,50 @@
-function get(artist, title) {
+// https://www.youtube.com/watch?v=h0sNAXE1ozo
+
+const $ = document.querySelector.bind(document);
+
+const artist = $('#artist');
+const song = $('#song');
+const lyric = $('#lyric');
+const form = $('#my-form');
+
+function getLyrics(artist, title) {
   return fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`);
 }
 
-const form = document.querySelector('#my-form');
-
 form.addEventListener('submit', e => {
   e.preventDefault();
-  show();
+  showLyrics();
 });
 
-const clear = document.getElementById('clear');
+const clear = $('#clear');
 
 clear.addEventListener('click', () => {
   document.location.reload();
 });
 
-async function show() {
-  const artist = document.querySelector('#artist');
-  const song = document.querySelector('#song');
-  const letras = document.querySelector('#letras');
-
-  letras.innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
+async function showLyrics() {
+  lyric.innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
 
   try {
-    const resp = await get(artist.value, song.value);
+    const resp = await getLyrics(artist.value, song.value);
     const data = await resp.json();
 
     const songs = JSON.parse(localStorage.getItem('lyrics')) || [];
 
     if(data.lyrics) {
       if(songs.find(e => e.artist === artist.value) && songs.find(e => e.song === song.value)) {
-        letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
+        lyric.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
 
       } else {
         const newSong = {'artist' : artist.value, 'song': song.value, 'lyric': data.lyrics};
         songs.push(newSong);
 
-        letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
+        lyric.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
         localStorage.setItem('lyrics', JSON.stringify(songs))
-      }
-
-    } else {
-      letras.innerHTML = songs.filter(e => e.artist === artist.value).filter(e => e.song === song.value).map(e => e.lyric);
-
-      if (letras.innerHTML === '') {
-        letras.innerHTML = 'Artista ou música inválidos!\nAPI: '+data.error;
       }
     }
 
-  } catch(err) {
-      console.log(err);
+    } catch(err) {
+      lyric.innerHTML = `API indisponível ou dados inválidos!\n\n${err}\nSee console for more details`;
     }
 }
