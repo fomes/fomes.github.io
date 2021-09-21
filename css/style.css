@@ -11,13 +11,13 @@ body {
   justify-content: center;
 }
 
-img {
+.profile-pic {
   border-radius: 50%;
   width: 200px;
   transition: transform 0.3s ease-in-out;
 }
 
-img:hover {
+.profile-pic:hover {
   transform: rotate(360deg);
 }
 

@@ -17,30 +17,32 @@
 
   <div class="container">
 
-    <div class="header">
-
-    </div>
-
     <div class="profile-img">
-      <img src="img/12602177.jpeg" alt="fomes"/>
+      <img src="img/12602177.jpeg" alt="fomes" class="profile-pic"/>
     </div>
 
     <div class="title">
-      <h4>FELIPE GOMES</h4>
-      <h5>FULL STACK DEVELOPER</h5>
-      <a href="mailto:fgomesdeluna@gmail.com"><button class="btn btn-md">CONTACT</button></a>
-      <button onclick="goToProjects()" class="btn btn-md">PROJECTS</button>
+      <h4>Felipe Gomes</h4>
+      <h5 id="subtitle"></h5>
+      <a href="mailto:fgomesdeluna@gmail.com"><button class="btn btn-md contact"></button></a>
+
+      <button onclick="goToProjects()" class="btn btn-md projects"></button>
     </div>
 
     <div class="about">
-      <p>
-        Olá Mundo 👋. Meu nome é Felipe, desenvolvedor Full Stack em formação. Atualmente estudando Node.js. Experiência com Javascript, React, MongoDB, Bootstrap, Materialize entre outras. Eu gosto de resolver problemas e ajudar a melhorar a vida das pessoas de alguma forma! 😁 Atualmente meu maior passatempo é <i>codar</i> e aprender novas tecnologias de desenvolvimento. 🙃
-      </p>
+      <p id="description"></p>
     </div>
 
-    <diiv class="footer">
-
-    </diiv>
+    <div class="switch">
+      <label>
+        <!-- <img src="img/br.svg" alt="br"> -->
+        PT-BR
+        <input type="checkbox">
+        <span class="lever"></span>
+        <!-- <img src="img/us.svg" alt="us"> -->
+        EN-US
+      </label>
+    </div>
 
   </div>
 
