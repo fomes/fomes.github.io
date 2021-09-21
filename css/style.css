@@ -27,6 +27,11 @@ body {
 
 .about {
   text-align: center;
+  font-size: 18px;
+}
+
+label {
+  font-weight: bolder;
 }
 
 /* https://codepen.io/bradleytaunt/pen/VVQKyr */
@@ -50,6 +55,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px auto;
+  margin-top: 10px;
   max-width: 1200px;
   width: 100%;
 }
